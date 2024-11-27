@@ -1,12 +1,14 @@
 from flask_mail import Message
-from app import mail
 from config.config import Config
 
 def send_email(subject, to, message):
+    from app import mail
+
+    #print(f"emailll {Config.MAIL_USERNAME}")
+    
     try:
         msg = Message(
             subject=subject,
-            sender=Config.MAIL_USERNAME,  # Substitua pelo seu e-mail
             recipients=[to],
             body=message
         )
