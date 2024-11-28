@@ -3,14 +3,13 @@ from config.config import Config
 
 def send_email(subject, to, message):
     from app import mail
-
-    #print(f"emailll {Config.MAIL_USERNAME}")
     
     try:
         msg = Message(
+            sender=Config.MAIL_USERNAME,
             subject=subject,
             recipients=[to],
-            body=message
+            body=message,
         )
         mail.send(msg)
         return {"message": "E-mail enviado com sucesso!"}, 200
