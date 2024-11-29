@@ -2,7 +2,7 @@ from flask_mail import Mail
 from flask import Flask
 from config.config import Config
 from flask_cors import CORS
-from app.routes import routes_bp  # Importa o Blueprint
+from src.routes import routes_bp  # Importa o Blueprint
 
 mail = Mail()
 

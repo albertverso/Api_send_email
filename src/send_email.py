@@ -2,7 +2,7 @@ from flask_mail import Message
 from config.config import Config
 
 def send_email(subject, to, message):
-    from app import mail
+    from src import mail
     
     try:
         msg = Message(

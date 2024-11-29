@@ -1,5 +1,5 @@
 from flask import request, jsonify, Blueprint
-from app.send_email import send_email
+from src.send_email import send_email
 
 routes_bp = Blueprint('routes', __name__)
 
